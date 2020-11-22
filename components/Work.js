@@ -28,7 +28,18 @@ const projects = {
         },
     ],
     "front-end": [
-        "3",
+        {
+            "bg": "#23317a",
+            "color": "#fffdfd",
+            "image": "images/quotify.png",
+            "title": "Quotify: A ReactJs application to generate random quotes",
+            "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
+            "role": "Front-End Developer",
+            "technologies": "ReactJs, ES6, REST API",
+            "time": "1 day",
+            "type": "Learning Purposes",
+            "link": "https://afaithraf.github.io/quotify/"
+        },
         "3",
         "3",
         "4"
