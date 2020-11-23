@@ -7,7 +7,7 @@ const projects = {
             "color": "#000",
             "image": "images/yonayn.png",
             "title": "Yonayn: the web design studio",
-            "overview": "Industrious is a premium flexible workspace provider that redefines the workplace experience. Industrious is a premium workplace platform, blending five-star service, and stunning design to provide unparalleled workplace experience for established professionals. Industrious is a workplace experience that helps teams of all sizes transform ideas into action, with the flexibility to scale on their own terms.",
+            "overview": "Yonayn is my new web design studio, still under construction with a goal to be one of the best web developing agencies",
             "role": " UX Design, UI Design and Full-Stack Developer",
             "technologies": "NuxtJs, JavaScript",
             "time": "4 weeks",
