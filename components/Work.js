@@ -1,7 +1,19 @@
 import React, { useState } from 'react'
 
 const projects = {
-    "wordpress": [
+    "Full-Stack": [
+        {
+            "bg": "#b9d2c5",
+            "color": "#000",
+            "image": "images/yonayn.png",
+            "title": "Yonayn: the web design studio",
+            "overview": "Industrious is a premium flexible workspace provider that redefines the workplace experience. Industrious is a premium workplace platform, blending five-star service, and stunning design to provide unparalleled workplace experience for established professionals. Industrious is a workplace experience that helps teams of all sizes transform ideas into action, with the flexibility to scale on their own terms.",
+            "role": " UX Design, UI Design and Full-Stack Developer",
+            "technologies": "NuxtJs, JavaScript",
+            "time": "4 weeks",
+            "type": "Website For My Brand",
+            "link": "https://yonayn.com/"
+        },
         {
             "bg": "#efe6d8",
             "color": "#010101",
@@ -9,25 +21,25 @@ const projects = {
             "title": "Designing a Responsive E-commerce website",
             "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
             "role": "Full-Stack Developer",
-            "technologies": "Wordpress, ReactJs, VuesJs, JavaScript",
-            "time": "4 weeks",
+            "technologies": "Wordpress, Html5, Sass, JavaScript",
+            "time": "3 weeks",
             "type": "Freelance Job",
-            "link": "//google.com"
+            "link": "#"
         },
         {
             "bg": "#252525",
             "color": "#fff",
             "image": "images/work2.jpg",
-            "title": "Designing a Responsive E-commerce website",
-            "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
-            "role": "Full-Stack Developer",
-            "technologies": "Wordpress, ReactJs, VuesJs, JavaScript",
+            "title": "Industrious - Visitors Self Check-In system",
+            "overview": "Industrious is a premium flexible workspace provider that redefines the workplace experience. Industrious is a premium workplace platform, blending five-star service, and stunning design to provide unparalleled workplace experience for established professionals. Industrious is a workplace experience that helps teams of all sizes transform ideas into action, with the flexibility to scale on their own terms.",
+            "role": " UX Design, UI Design and Full-Stack Developer",
+            "technologies": "Wordpress, VuesJs, JavaScript",
             "time": "4 weeks",
             "type": "Freelance Job",
-            "link": "//google.com"
+            "link": "#"
         },
     ],
-    "front-end": [
+    "Front-end": [
         {
             "bg": "#23317a",
             "color": "#fffdfd",
@@ -44,14 +56,14 @@ const projects = {
         "3",
         "4"
     ],
-    "UI design": [
+    "UI/UX design": [
         "5",
         "6"
     ]
 };
 
 export default function Work() {
-    const [activeCat, setActiveCat] = useState("wordpress");
+    const [activeCat, setActiveCat] = useState("all");
     return (
         <div className="dad">
             <h2>Work</h2>
@@ -75,7 +87,7 @@ export default function Work() {
             {
                 (activeCat == "all" ?
                     Object.keys(projects).map((e, i) =>
-                        Object.keys(projects[e]).map((e, i) => <WorkCard data={e} key={i} />)
+                        Object.keys(projects[e]).map((k, j)=><WorkCard data={projects[e][k]} key={j} />)
                     )
                     :
                     Object.keys(projects[activeCat]).map((e, i) => <WorkCard data={projects[activeCat][i]} key={i} />)
@@ -163,6 +175,10 @@ const WorkCard = (props) => {
                     color: ${data.color};
                     display: flex;
                     text-decoration: none;
+                    transition-duration: 200ms;
+                }
+                .card:hover{
+                    transform: scale(.95);
                 }
                 .left, .right{
                     flex: 1;

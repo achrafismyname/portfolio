@@ -12,12 +12,22 @@ export default function About() {
                     <li>Age:<span>20 years old</span></li>
                 </ul>
             </div>
-            <div className="right">
+            <div className="mid">
+                <h2>Strengths</h2>
                 <div className="strengths">
+                    <div><span>Trustworthy</span></div>
                     <div><span>Creative</span></div>
-                    <div><span>Passionate</span></div>
-                    <div><span>Fresh</span></div>
-                    <div><span>Hardworking</span></div>
+                    <div><span>Dedication</span></div>
+                    <div><span>Versatility</span></div>
+                </div>
+            </div>
+            <div className="right">
+                <h2>Weaknesses</h2>
+                <div className="strengths">
+                    <div><span>Perfectionist</span></div>
+                    <div><span>Lone Wolf</span></div>
+                    <div><span>Bad at Explaining</span></div>
+                    <div><span>Lazy</span></div>
                 </div>
             </div>
             <style jsx>{`
@@ -26,12 +36,19 @@ export default function About() {
                     width: 100%;
                     color: var(--white);
                     padding: 20px;
+                    padding-bottom: 40px;
                     display: flex;
                     justify-content: space-between;
                 }
                 h2{
-                    margin: 30px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
                     font-size: 2em;
+                    text-align: center;
+                }
+                .left,.mid,.right{
+                    flex: 1;
+                    align-items: center;
                 }
                 .left .info li{
                     font-weight: 600;
@@ -42,12 +59,13 @@ export default function About() {
                     font-weight: 300;
                     margin: 7px;
                 }
-                .right{
-                    margin-left: 20px;
+                .mid{
+                    margin: 0 20px;
                 }
                 .strengths{
                     height: 300px;
                     width: 300px;
+                    margin: 0 auto;
                     display: grid;
                     grid-template-rows: 48% 48%;
                     grid-template-columns: 48% 48%;
@@ -59,18 +77,21 @@ export default function About() {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 1.2em;
-                    font-weight: 400;
+                    font-size: 1.25em;
+                    font-weight: 600;
                     height: 100%;
                     width: 100%;
+                    text-align: center;
                 }
                 @media screen and (max-width: 669px){
                     .dad{
                         flex-direction: column;
                         align-items: center;
                     }
+                    h2{
+                        margin-top: 50px;
+                    }
                     .strengths{
-                        margin-top: 20px;
                         max-width: 90vw;
                         max-height: 90vw;
                     }

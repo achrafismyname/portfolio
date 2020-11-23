@@ -60,9 +60,9 @@ export default function Sidebar() {
                 <Image height="400" width="400" alt="achraf's portrait" src="/images/me.jpg" />
             </div>
             <h1>Achraf El Ghinoussi</h1>
-            <h2>Front-end / Full-Stack Developer</h2>
+            <h2>Front-end / Full-Stack Developer </h2>
             <p className="para">
-                "I want to use my skills to build websites that inpact the world in a good way."
+                "I don't just build websites, I build websites that IMPRESS."
             </p>
             <div className="links">
                 {links.map((e, i) =>
