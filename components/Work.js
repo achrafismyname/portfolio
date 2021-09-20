@@ -45,7 +45,7 @@ const projects = {
             "color": "#000",
             "image": "images/quotify.png",
             "title": "Quotify: A ReactJs application to generate random quotes",
-            "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
+            "overview": "Just a Test webapp",
             "role": "Front-End Developer",
             "technologies": "ReactJs, ES6, REST API",
             "time": "1 day",
@@ -54,6 +54,30 @@ const projects = {
         },
     ],
     "landing pages": [
+        {
+            "bg": "#dce7f8",
+            "color": "#000",
+            "image": "images/work4.png",
+            "title": "iFlip Real Estate",
+            "overview": "iFlip is a SAAS software for real eastate investors. I took the task of designing thier main landing page, including some copywriting. Client saw a good increase at Conversion rate from the previous design and was pleased with results.",
+            "role": "Landing Page Designer, copywriter",
+            "technologies": "Conversion Focused Design, Copywriting, HTML/CSS/JS",
+            "time": "4 days",
+            "type": "Freelance Project",
+            "link": "https://iflip.surge.sh/"
+        },
+        {
+            "bg": "#dce7f8",
+            "color": "#000",
+            "image": "images/work5.png",
+            "title": "Mentorship Retreat by Real Estate Wealth Network",
+            "overview": "",
+            "role": "Landing Page Designer",
+            "technologies": "Conversion Focused Design, HTML/CSS/JS",
+            "time": "5 days",
+            "type": "Freelance Project",
+            "link": "https://mentorshipretreat.com/"
+        },
     ]
 };
 
