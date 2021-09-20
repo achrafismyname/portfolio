@@ -28,10 +28,15 @@ const Home = () => {
           <Sidebar />
         </div>
         <main className="content">
-          {(width>1200?
+          {/* {(width>1200?
           (<Scrollbar><About /><Work /></Scrollbar>)
           :
           (<><About /><Work /></>)
+          )} */}
+          {(width>1200?
+          (<Scrollbar><Work /></Scrollbar>)
+          :
+          (<><Work /></>)
           )}
         </main>
       </div>

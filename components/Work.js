@@ -1,48 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect  } from 'react'
 
 const projects = {
-    "Full-Stack": [
+    "shopify": [
         {
-            "bg": "#b9d2c5",
+            "bg": "#dce7f8",
             "color": "#000",
-            "image": "images/yonayn.png",
-            "title": "Yonayn: the web design studio",
-            "overview": "Yonayn is my new web design studio, still under construction with a goal to be one of the best web developing agencies",
-            "role": " UX Design, UI Design and Full-Stack Developer",
-            "technologies": "NuxtJs, JavaScript",
-            "time": "4 weeks",
-            "type": "Website For My Brand",
-            "link": "https://yonayn.com/"
+            "image": "images/work1.png",
+            "title": "Sleepy Owl Coffee",
+            "overview": "Sleepy Owl Coffee is an indian online shopify store, they already had the website built long time ago. But my job was to update it (the look, and new customizations), as it receive consistent updates every week, depending on the requirements sent from the owner. He was very pleased with my work specially with my fast turn-around time.",
+            "role": "Liquid / Front-end Developer, Web Designer",
+            "technologies": "Shopify, Liquid, JS",
+            "time": "3 months",
+            "type": "Part-Time",
+            "link": "https://sleepyowl.co/"
         },
         {
-            "bg": "#efe6d8",
-            "color": "#010101",
-            "image": "https://storage.googleapis.com/uxfolio/5da08d792b56810004cda5da/5da7396af4db040004fcad7d/bDoKgnj5KuaRczr5.png",
-            "title": "Designing a Responsive E-commerce website",
-            "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
-            "role": "Full-Stack Developer",
-            "technologies": "Wordpress, Html5, Sass, JavaScript",
+            "bg": "#dce7f8",
+            "color": "#000",
+            "image": "images/work2.png",
+            "title": "Bymenna",
+            "overview": "Bymenna is an ecommerce fashion online store by a woman from U.A.E, the task of building the shopify store was given to me from start to end and it went quite smoothly. I used a theme matching the wanted style from envato, then customized and added section to the code so it's exactly what the owner wanted. She was grateful to have someone take care of the technical stuff for her.",
+            "technologies": "Shopify, Liquid, JS",
             "time": "3 weeks",
+            "role": "Liquid / Front-end Developer, Web Designer + Shopify Manager",
             "type": "Freelance Job",
-            "link": "#"
+            "link": "https://bymenna.com/"
         },
         {
-            "bg": "#252525",
-            "color": "#fff",
-            "image": "images/work2.jpg",
-            "title": "Industrious - Visitors Self Check-In system",
-            "overview": "Industrious is a premium flexible workspace provider that redefines the workplace experience. Industrious is a premium workplace platform, blending five-star service, and stunning design to provide unparalleled workplace experience for established professionals. Industrious is a workplace experience that helps teams of all sizes transform ideas into action, with the flexibility to scale on their own terms.",
-            "role": " UX Design, UI Design and Full-Stack Developer",
-            "technologies": "Wordpress, VuesJs, JavaScript",
-            "time": "4 weeks",
-            "type": "Freelance Job",
-            "link": "#"
+            "bg": "#dce7f8",
+            "color": "#000",
+            "image": "images/work3.png",
+            "title": "Lifenote",
+            "overview": "This is not a real store, it's just an example I made and you can access it using the code 'neiwah'",
+            "technologies": "Shopify, Liquid, JS",
+            "role": "Liquid / Front-end Developer, Web Designer + Shopify Manager",
+            "time": "1 week",
+            "type": "Portfolio Project",
+            "link": "https://lifenotestore.myshopify.com/"
         },
     ],
-    "Front-end": [
+    "front-end": [
         {
-            "bg": "#23317a",
-            "color": "#fffdfd",
+            "bg": "#dce7f8",
+            "color": "#000",
             "image": "images/quotify.png",
             "title": "Quotify: A ReactJs application to generate random quotes",
             "overview": "Mirror, a global retail store offering to good quality clothing at a reasonable price for everyone. Mirror's main purpose is to make affordable and good quality clothing that is accessible to everyone.",
@@ -52,21 +52,32 @@ const projects = {
             "type": "Learning Purposes",
             "link": "https://afaithraf.github.io/quotify/"
         },
-        "3",
-        "3",
-        "4"
     ],
-    "UI/UX design": [
-        "5",
-        "6"
+    "landing pages": [
     ]
 };
 
+
 export default function Work() {
+
     const [activeCat, setActiveCat] = useState("all");
+
+    useEffect(function mount() {
+
+        const search = window.location.search;
+        const params = new URLSearchParams(search);
+        const foo = params.get('work');
+        if(foo !== "undefined" && projects.hasOwnProperty(foo)){
+            setActiveCat(foo);
+        }
+    
+        return function unMount() {
+        };
+    }, {});
+
     return (
         <div className="dad">
-            <h2>Work</h2>
+            <h2>Portfolio</h2>
             <div className="cat-select">
                 <div
                     className={"cat " + ("all" == activeCat ? "active" : null)}
@@ -95,10 +106,10 @@ export default function Work() {
             }
             <style jsx>{`
                 .dad{
-                    margin: 40px auto;
+                    margin: 0 auto 40px;
                 }
                 h2{
-                    margin: 30px auto;
+                    margin: 10px auto 60px;
                     font-size: 2.2em;
                     text-align: center;
                 }
@@ -162,7 +173,7 @@ const WorkCard = (props) => {
                 </div>
             </div>
             <div className="right">
-                <img src={data.image} alt={data.title} />
+                <img id="{data.image}" src={data.image} alt={data.title} />
             </div>
             <style jsx>{`
                 .card{
@@ -196,6 +207,10 @@ const WorkCard = (props) => {
                     font-size: 1.7em;
                     font-weight: 600;
                     line-height: 1.5em;
+                }
+                .right {
+                    
+    margin: 40px;
                 }
                 .right img{
                     height: 100%;

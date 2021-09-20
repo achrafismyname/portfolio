@@ -5,37 +5,37 @@ const links = [
     {
         "title": "github",
         "icon": "i-github",
-        "link": "https://github.com/afaithraf",
+        "link": "https://github.com/achrafismyname/",
         "color": "#333"
     },
     {
         "title": "linkedin",
         "icon": "i-linkedin",
-        "link": "https://www.linkedin.com/in/afaithraf/",
+        "link": "https://www.linkedin.com/in/achrafismyname/",
         "color": "#0e76a8"
     },
     {
         "title": "instagram",
         "icon": "i-instagram",
-        "link": "https://www.instagram.com/afaithraf/",
+        "link": "https://www.instagram.com/achrafismyname/",
         "color": "#C13584"
     },
     {
         "title": "facebook",
         "icon": "i-facebook2",
-        "link": "https://www.facebook.com/afaithraf",
+        "link": "https://www.facebook.com/achrafismyname/",
         "color": "#3b5998"
     },
     {
         "title": "twitter",
         "icon": "i-twitter",
-        "link": "https://twitter.com/afaithraf",
+        "link": "https://twitter.com/achrafismyname",
         "color": "#1DA1F2"
     },
     {
         "title": "dribbble",
         "icon": "i-dribbble",
-        "link": "https://dribbble.com/afaithraf",
+        "link": "https://dribbble.com/achrafismyname",
         "color": "#ea4c89"
     }
 ];
@@ -49,8 +49,8 @@ const otherLinks = [
         "link": "mailto:afaithraf@gmail.com"
     },
     {
-        "title": "+212-634516342",
-        "link": "tel:+212634516342"
+        "title": "WhatsApp",
+        "link": "https://wa.me/%2B212696887193?text=Hi%20Achraf%2C%20I%20saw%20your%20portfolio%20"
     }
 ];
 export default function Sidebar() {
@@ -60,7 +60,7 @@ export default function Sidebar() {
                 <Image height="400" width="400" alt="achraf's portrait" src="/images/me.jpg" />
             </div>
             <h1>Achraf El Ghinoussi</h1>
-            <h2>Front-end / Full-Stack Developer </h2>
+            <h2>Web Developer / Designer </h2>
             <p className="para">
                 "I don't just build websites, I build websites that IMPRESS."
             </p>
