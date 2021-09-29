@@ -12,7 +12,7 @@ const projects = {
             "technologies": "Shopify, Liquid, JS",
             "time": "3 months",
             "type": "Part-Time",
-            "link": "https://sleepyowl.co/"
+            "link": "https://href.li/?https://sleepyowl.co/"
         },
         {
             "bg": "#dce7f8",
@@ -24,7 +24,7 @@ const projects = {
             "time": "3 weeks",
             "role": "Liquid / Front-end Developer, Web Designer + Shopify Manager",
             "type": "Freelance Job",
-            "link": "https://bymenna.com/"
+            "link": "https://href.li/?https://bymenna.com/"
         },
         {
             "bg": "#dce7f8",
@@ -36,7 +36,7 @@ const projects = {
             "role": "Liquid / Front-end Developer, Web Designer + Shopify Manager",
             "time": "1 week",
             "type": "Portfolio Project",
-            "link": "https://lifenotestore.myshopify.com/"
+            "link": "https://href.li/?https://lifenotestore.myshopify.com/"
         },
     ],
     "front-end": [
@@ -50,7 +50,7 @@ const projects = {
             "technologies": "ReactJs, ES6, REST API",
             "time": "1 day",
             "type": "Learning Purposes",
-            "link": "https://afaithraf.github.io/quotify/"
+            "link": "https://href.li/?https://afaithraf.github.io/quotify/"
         },
     ],
     "landing pages": [
@@ -64,7 +64,7 @@ const projects = {
             "technologies": "Conversion Focused Design, Copywriting, HTML/CSS/JS",
             "time": "4 days",
             "type": "Freelance Project",
-            "link": "https://iflip.surge.sh/"
+            "link": "https://href.li/?https://iflip.surge.sh/"
         },
         {
             "bg": "#dce7f8",
@@ -76,7 +76,7 @@ const projects = {
             "technologies": "Conversion Focused Design, HTML/CSS/JS",
             "time": "5 days",
             "type": "Freelance Project",
-            "link": "https://mentorshipretreat.com/"
+            "link": "https://href.li/?https://mentorshipretreat.com/"
         },
     ]
 };
@@ -97,7 +97,7 @@ export default function Work() {
     
         return function unMount() {
         };
-    }, {});
+    }, []);
 
     return (
         <div className="dad">
@@ -181,7 +181,7 @@ export default function Work() {
 const WorkCard = (props) => {
     let data = props.data;
     return (
-        <a href={data.link} className="card" target="_blank">
+        <a href={data.link} className="card" target="_blank" rel="noreferrer">
             <div className="left">
                 <div className="top">
                     <h3>{data.title}</h3>

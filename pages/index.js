@@ -6,6 +6,8 @@ import About from '../components/About'
 import Sidebar from '../components/Sidebar'
 import Work from '../components/Work'
 
+import Login from '../components/Login'
+
 const Home = () => {
   const [width, setWidth] = useState(2000);
   useEffect(() => {
@@ -15,6 +17,12 @@ const Home = () => {
     })
     return;
   }, []);
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(0);
+
+  if (!isAuthenticated) {
+    return  <Login setAuth={setIsAuthenticated} />;
+  }
 
   return (
   <div className="container">

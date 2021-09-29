@@ -66,14 +66,14 @@ export default function Sidebar() {
             </p>
             <div className="links">
                 {links.map((e, i) =>
-                    <a key={i} target="_blank" href={e.link} title={e.title} style={{ ['--color']: e.color }}>
+                    <a key={i} target="_blank" href={e.link} title={e.title} style={{ ['--color']: e.color }} rel="noreferrer">
                         <span className={e.icon}></span>
                     </a>
                 )}
             </div>
             <div className="other-links">
                 {otherLinks.map((e, i) =>
-                    <a key={i} target="_blank" href={e.link} title={e.title}>
+                    <a key={i} target="_blank" href={e.link} title={e.title} rel="noreferrer">
                         {e.title}
                     </a>
                 )}
