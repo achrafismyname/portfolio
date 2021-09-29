@@ -83,6 +83,8 @@ export default function Sidebar() {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
+    overflow: auto;
+    max-height: 100%;
                 }
                 .portrait{
                     padding-right: 0;
